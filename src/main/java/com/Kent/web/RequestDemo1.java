@@ -35,6 +35,14 @@ public class RequestDemo1 extends HttpServlet {
         // 取得請求頭: user-agent: 瀏覽器的版本訊息
         String agent = req.getHeader("user-agent");
         System.out.println(agent);
+
+//        GET
+//        /request-demo
+//        http://localhost:8080/request-demo/req1
+//        /request-demo/req1
+//        username=123&password=123&hobby=1
+//        Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+
     }
 
     @Override
@@ -46,5 +54,7 @@ public class RequestDemo1 extends HttpServlet {
         // 2. 讀取數據
         String line = br.readLine();
         System.out.println(line);
+
+//        username=123&password=123&hobby=1
     }
 }
