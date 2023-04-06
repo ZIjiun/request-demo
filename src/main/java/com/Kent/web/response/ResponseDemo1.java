@@ -21,7 +21,9 @@ public class ResponseDemo1 extends HttpServlet {
 //        resp.setHeader("Location", "/request-demo/resp2");
 
         // 簡化方式完成重定向
-        resp.sendRedirect("/request-demo/resp2");
+        // 動態取得虛擬目錄
+        String contextPath = req.getContextPath();
+        resp.sendRedirect(contextPath + "/resp2");
     }
 
     @Override
