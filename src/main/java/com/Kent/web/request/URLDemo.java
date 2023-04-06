@@ -1,4 +1,4 @@
-package com.Kent.web;
+package com.Kent.web.request;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

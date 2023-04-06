@@ -1,4 +1,4 @@
-package com.Kent.web;
+package com.Kent.web.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
