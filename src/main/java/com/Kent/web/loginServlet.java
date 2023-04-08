@@ -2,6 +2,7 @@ package com.Kent.web;
 
 import com.Kent.mapper.UserMapper;
 import com.Kent.pojo.User;
+import com.Kent.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,9 +27,11 @@ public class loginServlet extends HttpServlet {
 
         // 2. 調用 MyBatis 完成查詢
         // 2.1 取得 SqlSessionFactory 物件
-        String resource = "mybatis-config.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resource);
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+//        String resource = "mybatis-config.xml";
+//        InputStream inputStream = Resources.getResourceAsStream(resource);
+//        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
         // 2.2 取得 SqlSession 物件
         SqlSession sqlSession = sqlSessionFactory.openSession();
